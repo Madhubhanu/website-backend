@@ -15,16 +15,16 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 
-# app = Flask(__name__)
+app = Flask(__name__)
 
 
-# # Define the trusted domain
-# ALLOWED_ORIGINS = ["http://127.0.0.1:5000"]
+# Define the trusted domain
+ALLOWED_ORIGINS = ["https://website-backend-r1z2.onrender.com"]
 
-# # Configure CORS to allow only the trusted domain
-# CORS(app, resources={r"/*": {"origins": ALLOWED_ORIGINS}})
-app  =Flask(__name__)
-CORS(app)
+# Configure CORS to allow only the trusted domain
+CORS(app, resources={r"/*": {"origins": ALLOWED_ORIGINS}})
+# app  =Flask(__name__)
+# CORS(app)
 
 # ✅ Register Blueprints
 app.register_blueprint(batch_routes)
