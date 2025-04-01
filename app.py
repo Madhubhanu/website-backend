@@ -13,13 +13,13 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
-import os
+
 
 # app = Flask(__name__)
 
 
 # # Define the trusted domain
-# ALLOWED_ORIGINS = ["https://website-backend-r1z2.onrender.com"]
+# ALLOWED_ORIGINS = ["http://127.0.0.1:5000"]
 
 # # Configure CORS to allow only the trusted domain
 # CORS(app, resources={r"/*": {"origins": ALLOWED_ORIGINS}})
@@ -42,8 +42,8 @@ availability_collection = db["availability_status"]  # ✅ New collection for av
 
 
 # ✅ Email Credentials (Use App Password for Gmail)
-SENDER_EMAIL = "" #personal testing  email
-SENDER_PASSWORD = ""  # App Password for Gmail
+SENDER_EMAIL = "hima@khdreamlife.com" #personal testing  email
+SENDER_PASSWORD = "acky obrz igqm qaub"  # App Password for Gmail
 
 
 SMTP_SERVER = "smtp.gmail.com"
@@ -283,6 +283,6 @@ def send_email_with_attachment(to_emails, file_path, filename,patient_id):
 
 
 if __name__ == '__main__':
-    port = int(os.getenv("PORT", 5000))  # Use Render's PORT or default to 5000
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
 
