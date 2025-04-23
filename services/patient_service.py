@@ -173,8 +173,8 @@ def read_excel_from_gridfs(file_id):
                     "Conseq score": row.get("Consequence score", None),
                     "IMPACT": row.get("IMPACT", None),
                     "IMPACT score": row.get("IMPACT score", None),
-                    "ClinVar CLNDN": row.get("ClinVar CLNDN", None),
-                    "Clinical consequence": row.get("Clinical consequence", None),
+                    "ClinVar_CLNDN": row.get("ClinVar CLNDN", None),
+                    "Clinical_consequence": row.get("Clinical consequence", None),
                     "clin sig": row.get("ClinVar CLNSIG", None),
                     "Variant type": row.get("Variant type", None)
                 }
